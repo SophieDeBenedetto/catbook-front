@@ -1,0 +1,19 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Hobbies</h3>
+  </div>
+  <div class="panel-body">
+  <ul class='index-ul'>
+    {{#each model as |hobby|}}
+      <li><h4>{{hobby.name}}</h4></li>
+        <ul>
+          {{#each hobby.cats as |cat|}}
+          <li>
+            {{#link-to 'cats.cat' cat}}{{cat.name}}{{/link-to}}
+          </li>
+          {{/each}}
+        </ul>
+    {{/each}}
+  </ul>
+  </div>
+</div>

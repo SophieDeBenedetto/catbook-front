@@ -1,0 +1,26 @@
+<div class='col-md-4'>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Cats {{link-to '+' 'cats.new'}}</h3>
+  </div>
+  <div class="panel-body">
+  <ul class='index-ul'>
+    {{#each model as |cat|}}
+      <li><h4>{{cat.name}}</h4></li>
+      <li>temperament: {{cat.temperament}}</li>
+        <ul>
+          {{#each cat.hobbies as |hobby|}}
+          <li>
+            {{#link-to 'hobbies.hobby' hobby}}{{hobby.name}}{{/link-to}}
+          </li>
+          {{/each}}
+        </ul>
+    {{/each}}
+  </ul>
+  </div>
+</div>
+</div>
+
+<div class='col-md-4'> 
+  {{outlet}}
+</div>
