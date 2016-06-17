@@ -1,7 +1,7 @@
 <div class='col-md-4'>
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title">Cats <button class="btn-default" {{action 'toggleModal'}}>+</button></h3>
+    <h3 class="panel-title">Cats {{link-to "+" "cats.new"}}</h3>
   </div>
   <div class="panel-body">
   <ul class='index-ul'>
@@ -22,7 +22,4 @@
 </div>
 <div class='col-md-4'> 
   {{outlet}}
-{{#if enabled}}
-  {{new-cat-modal cat=newCat hobbies=allHobbies}}
-{{/if}}
 </div>

@@ -1,0 +1,33 @@
+<form class="form-horizontal" onSubmit={{action 'submit'}}>
+<legend>New Cat</legend>
+  <div class="form-group"> 
+      <div class="col-lg-10">
+         {{input value=name class="form-control" placeholder="name"}}
+      </div>
+  </div>
+  <div class="form-group"> 
+      <div class="col-lg-10">
+         {{input value=breed class="form-control form-label" placeholder="breed"}}
+      </div>
+  </div>
+  <div class="form-group">
+      <div class="col-lg-10">
+         {{input value=temperament class="form-control" placeholder="temperament"}}
+      </div>
+  </div>
+  <div class="form-group"> 
+      <div class="col-lg-10">
+         {{input value=weight class="form-control" placeholder="weight"}}
+      </div>
+  </div>
+  <div class="form-group"> 
+    hobbies:
+      {{#each hobbies as |hobby|}}
+      <div class="col-lg-10">
+         {{input value=hobby.name class="form-control" placeholder="hobby name"}}
+      </div>
+      {{/each}}
+  </div>
+  <button class='btn btn-info'>save</button>
+</form>
+

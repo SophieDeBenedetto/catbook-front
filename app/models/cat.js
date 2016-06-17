@@ -6,5 +6,6 @@ export default Model.extend({
   name: attr(),
   breed: attr(),
   weight: attr(),
-  hobbies: hasMany('hobby') 
+  temperament: attr(),
+  hobbies: hasMany('hobby', {embedded: 'always'}) 
 });

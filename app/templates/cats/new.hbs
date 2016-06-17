@@ -1,3 +1,12 @@
-{{new-cat-modal}}
+{{new-cat-form 
+  name=model.name 
+  breed=model.breed 
+  temperament=model.temperament
+  weight=model.weight
+  hobbies=newHobbies
+  triggerSave=(action 'save')
+  }}
 
-NEW
+  {{#if apiReturn}}
+    {{message}}
+  {{/if}}
